@@ -1,0 +1,9 @@
+# 单页应用：任意路径回退到 index.html，避免客户刷新子路由 404
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+[build]
+  command = "npm run build"
+  publish = "dist"

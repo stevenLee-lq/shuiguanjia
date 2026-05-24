@@ -1,0 +1,6 @@
+{
+  "name": "智能水务管理助手",
+  "description": "移动端水管理入口：登录时选择公共供水户或自备水，首页按取水户类型展示；支持抄表、计划、定额对标与智能问答等（原型）。",
+  "requestFramePermissions": [],
+  "majorCapabilities": []
+}
