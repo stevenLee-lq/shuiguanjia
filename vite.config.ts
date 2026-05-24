@@ -6,6 +6,8 @@ import {defineConfig, loadEnv} from 'vite';
 export default defineConfig(({mode}) => {
   const env = loadEnv(mode, '.', '');
   return {
+    // 适配 GitHub Pages 的基础路径（须与仓库名一致，前后斜杠不可省略）
+    base: '/shuiguanjia/',
     plugins: [react(), tailwindcss()],
     define: {
       // 未设置时须为 ""，避免 JSON.stringify(undefined) 导致运行时代码异常 + SDK 在浏览器中无 key 时抛错白屏
