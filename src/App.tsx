@@ -67,6 +67,7 @@ import { twMerge } from 'tailwind-merge';
 import { UserType, COMMON_SERVICES } from './types.ts';
 import { loginResolveUserType } from './services/authService.ts';
 import { PublicWaterSupplyLogo } from './components/icons/PublicWaterSupplyLogo.tsx';
+import { publicAssetUrl } from './utils/publicAssetUrl.ts';
 import { IndustryPathBottomPicker, type IndustryTreeNode } from './components/IndustryPathBottomPicker.tsx';
 import { askGemini } from './services/geminiService.ts';
 import {
@@ -736,7 +737,7 @@ const HomePage = () => {
             aria-label="山水湖泊横幅配图"
           >
             <img
-              src="/images/home-banner-landscape.png"
+              src={publicAssetUrl('images/home-banner-landscape.png')}
               alt=""
               className="absolute inset-0 h-full w-full object-cover object-center"
               decoding="async"
@@ -3625,7 +3626,7 @@ export default function App() {
       }}
     >
       <AntdApp>
-        <BrowserRouter>
+        <BrowserRouter basename={import.meta.env.BASE_URL}>
           <div className="max-w-md mx-auto relative bg-gray-50 min-h-screen">
             <AnimatePresence mode="wait">
               <Routes>
